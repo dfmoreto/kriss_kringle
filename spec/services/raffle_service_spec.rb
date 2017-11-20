@@ -28,6 +28,7 @@ describe RaffleService do
 
       it "all member are in results as a friend" do
         result_friends = @results.map {|r| r.last}
+        @campaign.reload
         expect(result_friends.sort).to eq(@campaign.members.sort)
       end
 
