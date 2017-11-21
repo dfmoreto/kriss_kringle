@@ -6,4 +6,10 @@ class CampaignMailer < ApplicationMailer
     @friend = friend
     mail to: @member.email, subject: "Nosso Amigo Secreto: #{@campaign.title}"
   end
+
+
+  def error(campaign)
+    @campaign = campaign
+    mail to: @campaign.user.email, subject: "Nosso Amigo Secreto: Erro na campanha #{@campaign.title}"
+  end
 end
