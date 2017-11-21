@@ -1,0 +1,12 @@
+<div id="delete_campaign_modal" class="modal">
+  <div class="modal-content">
+    <h4>Excluir</h4>
+    <p>Por favor, confirme a exclusão da campanha <%= campaign.title %></p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-action modal-close btn-flat">Cancelar</a>
+    <%= form_for @campaign, method: 'delete', html: {class: 'remove_campaign right'} do |f| %>
+      <button type='submit' class="waves-effect waves-light btn red">Sim, eu quero Excluir!</button>
+    <% end %>
+  </div>
+</div>
