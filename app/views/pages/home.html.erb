@@ -8,4 +8,22 @@
       <%= submit_tag("Criar Agora", class: "waves-effect waves-light btn home-button") %>
     <% end %>
   </div>
+
+  <br />
+
+</div>
+
+<div class="row campaigns">
+  <div class="row cards">
+    <div class="col s8 offset-s2">
+      <h5 class="subtitle">Suas Campanhas</h5>
+
+      <% if current_user.campaigns.any? %>
+        <%= render current_user.campaigns %>
+      <% else %>
+        <p>Cadastre a sua primeira campanha! =D</p>
+      <% end %>
+
+    </div>
+  </div>
 </div>
